@@ -1,0 +1,19 @@
+{
+  "name": "cypress",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress open "
+  },
+  "keywords": [
+    "cypress"
+  ],
+  "author": "jesus utria",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^12.2.0",
+    "mysql": "^2.18.1",
+    "otplib": "^12.0.1"
+  }
+}
