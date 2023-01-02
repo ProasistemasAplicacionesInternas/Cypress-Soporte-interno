@@ -1,0 +1,30 @@
+[
+    {
+      "name": "usuario.administrador",
+      "username": "usuario.administrador",
+      "password": "Soporteinterno2022*",
+      "status": true
+    },
+  
+    {
+      "name": "login password incorect",
+      "username": "pruebas",
+      "password": "Soporteinterno2022",
+      "status": false
+    },
+  
+    {
+      "name": "login user & password incorect",
+      "username": "prueba",
+      "password": "Soporteinterno2022",
+      "status": false
+    },
+  
+    {
+      "name": "login user inactive",
+      "username": "pruebas.inactivo",
+      "password": "Soporteinterno2022*",
+      "status": false,
+      "alert": "Su cuenta ha sido bloqueada, por favor restablezca contraseña"
+    }
+  ]

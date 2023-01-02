@@ -7,7 +7,7 @@ function queryTestDb(query,config) {
         "host": "localhost",
         "user": "root",
         "password": "",
-        "database":"hcloud"
+        "database":"hinfraestructura"
       }}
   const connection = mysql.createConnection(env.db)
   connection.connect()
@@ -25,8 +25,10 @@ function queryTestDb(query,config) {
 module.exports = defineConfig({
   chromeWebSecurity: false, 
   e2e: {
+    experimentalSessionAndOrigin: true,
     setupNodeEvents(on, config) {
       on("task", {
+        generateOTP: require("cypress-otp"),
         queryDb: query => {
           return queryTestDb(query, config);
         }});
