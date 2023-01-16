@@ -1,4 +1,3 @@
-
 class validacionTokenPage {
   elements = {
     tittle: () => cy.get("h1"),
@@ -29,11 +28,24 @@ class validacionTokenPage {
       .should("to.contain", '3. Click en el botón "Validar con Token". ');
   }
 
-  token(){
-    cy.task("queryDb","SELECT * FROM `validacion_token` ORDER BY `validacion_token`.`fecha_token` DESC").then((result)=>{
-        this.elements.token().type(result[0].token)
-        this.elements.btnToken().click()
-    })
+  token(URL) {
+    if (URL == 1) {
+      cy.task(
+        "queryDb",
+        "SELECT * FROM `validacion_token` ORDER BY `validacion_token`.`fecha_token` DESC"
+      ).then((result) => {
+        this.elements.token().type(result[0].token);
+        this.elements.btnToken().click();
+      });
+    } else {
+      cy.task(
+        "queryDb",
+        "SELECT * FROM `validacion_token` ORDER BY `validacion_token`.`fecha_token` DESC"
+      ).then((result) => {
+        cy.get("#tokenF").type(result[0].token);
+        this.elements.btnToken().click();
+      });
+    }
   }
 }
 module.exports = new validacionTokenPage();

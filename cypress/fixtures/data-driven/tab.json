@@ -1,0 +1,71 @@
+[
+    {
+      "title": "Generar Solicitud",
+      "tabla": [
+        "Area",
+        "Categoria",
+        "Descripcion",
+        "Cargar Imagen Evidencia",
+        "Area",
+        "Producto",
+        "Tipo de peticion",
+        "Descripcion",
+        "Cargar Imagen Evidencia"
+      ]
+    },
+    {
+      "title": "Consulta Peticiones",
+      "tabla": [
+        "#",
+        "Categoria",
+        "Fecha Solicitud",
+        "Descripción",
+        "Estado Solicitud",
+        "Fecha Atendido",
+        "Usuario Atiende",
+        "Conclusiones",
+        "Revisado"
+      ]
+    },
+    {
+      "title": "Solicitudes Internas",
+      "tabla": [
+        "Nro Ticket",
+        "Usuario",
+        "Fecha solicitud",
+        "Area",
+        "Extension",
+        "Producto",
+        "Atiende",
+        "Estado",
+        "Tipo de Peticion",
+        "Tiempo",
+        "Modificar"
+      ]
+    },
+    {
+      "tabla": [
+        "Cod",
+        "Fecha Solicitud",
+        "Usuario",
+        "Ext",
+        "Correo",
+        "Producto",
+        "Descripción",
+        "Estado",
+        "¿Requiere Versión?",
+        "Tipo de petición",
+        "Observaciones"
+      ],
+      "tablac": [
+        "nropeticion",
+        "fechapeticion",
+        "usuario",
+        "extension",
+        "correo",
+        "categoria",
+        "descripcion"
+        
+      ]
+    }
+]

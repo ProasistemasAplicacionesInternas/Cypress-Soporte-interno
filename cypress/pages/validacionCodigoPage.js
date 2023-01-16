@@ -1,7 +1,5 @@
 import { totp } from "otplib";
-import { BrowserMultiFormatReader } from '@zxing/browser';
 
-const reader = new BrowserMultiFormatReader();
 
 class validacionCodigoPage {
   elements = {
@@ -16,9 +14,8 @@ class validacionCodigoPage {
     paso7: () => cy.get(".row > :nth-child(1) > :nth-child(8)"),
     token: () => cy.get("#code"),
     btnToken: () => cy.get("#btnCode"),
-    QR: () => cy.get('.img-fluida'),
+    QR: () => cy.get(".img-fluida"),
   };
-
 
   validarText(QR) {
     if (QR == undefined) {
@@ -39,9 +36,7 @@ class validacionCodigoPage {
         .paso4()
         .should("to.contain", "4. Este código se actualiza cada 30 segundos. ");
     } else {
-      this.elements
-        .tittle()
-        .should("to.contain", "Autenticación de QR");
+      this.elements.tittle().should("to.contain", "Autenticación de QR");
       this.elements
         .paso1()
         .should(
@@ -71,40 +66,57 @@ class validacionCodigoPage {
     }
   }
 
-  token(QR) {
+  token(usuario, QR) {
     if (QR == undefined) {
       cy.task(
         "queryDb",
-        "SELECT * FROM `codigosqr` WHERE id_usuario = 'codigo'"
-      ).then((consulta)=>{
-        cy.task("generateOTP",consulta[0].codigo).then((result)=>{
-          this.elements.token().type(result)
-          this.elements.btnToken().click()
-        })
-      })
-    } else {
-      this.elements.QR().then($el =>{
-        const img = $el[0];
-          const image = new Image();
-          image.width = img.width;
-          image.height = img.height;
-          image.src = img.src;
-          image.crossOrigin = 'Anonymous';
-          return image;
-      })
-      .then(image => {
-        const reader = new BrowserMultiFormatReader();
-        return reader.decodeFromImageElement(image[0])
-      })
-      .then((link) => {
-        var secret = link.text.substring(59)
-        cy.task("generateOTP", secret).then((result)=>{
-          this.elements.token().type(result)
-          this.elements.btnToken().click()
-        })
+        "SELECT * FROM `codigosqr` WHERE id_usuario =" + "'" + usuario + "'"
+      ).then((consulta) => {
+        cy.task("generateOTP", consulta[0].codigo).then((result) => {
+          this.elements.token().type(result);
+          this.elements.btnToken().click();
+        });
       });
+    } else {
+      this.elements
+        .QR().readCode()
+        .then((link) => {
+          var secret = link.text.substring(59);
+          cy.task("generateOTP", secret).then((result) => {
+            this.elements.token().type(result);
+            this.elements.btnToken().click();
+          });
+        });
     }
-   
+  }
+
+  tokenPeticiones(usuario, QR) {
+    if (QR == undefined) {
+      cy.task(
+        "queryDb",
+        "SELECT * FROM codigosqr_funcionarios WHERE id_usuario =" +
+          "'" +
+          usuario +
+          "'"
+      ).then((consulta) => {
+        cy.task("generateOTP", consulta[0].codigo).then((result) => {
+          this.elements.token().type(result);
+          this.elements.btnToken().click();
+        });
+      });
+    } else {
+      this.elements
+        .QR().wait(10).readCode()
+        .then((link) => {
+          cy.log(link)
+          var secret = link.text.substring(49);
+          cy.log(secret)
+          cy.task("generateOTP", secret).then((result) => {
+            this.elements.token().type(result);
+            this.elements.btnToken().click();
+          });
+        });
+    }
   }
 }
 module.exports = new validacionCodigoPage();

@@ -3,6 +3,8 @@ class loginPage {
       alert: () => cy.get("p"),
       alertBtn: () => cy.get("#alerta"),
       usernameInput: () => cy.get('input[placeholder="Usuario"]'),
+      passwordPeticionesInput: () => cy.get('input[placeholder="contraseña"]'),
+      usernamePeticionesInput: () => cy.get('input[placeholder="usuario"]'),
       passwordInput: () => cy.get('input[placeholder="Contraseña"]'),
       forgot: () => cy.get("a"),
       loginBtn: () => cy.get("#ingresar"),
@@ -18,6 +20,20 @@ class loginPage {
     typePassword(password) {
       this.elements.passwordInput().type(password);
       this.elements.passwordInput().should(($input) => {
+        expect($input).to.have.attr("required");
+      });
+    }
+
+    typePeUsername(username) {
+      this.elements.usernamePeticionesInput().type(username);
+      this.elements.usernamePeticionesInput().should(($input) => {
+        expect($input).to.have.attr("required");
+      });
+    }
+  
+    typePePassword(password) {
+      this.elements.passwordPeticionesInput().type(password);
+      this.elements.passwordPeticionesInput().should(($input) => {
         expect($input).to.have.attr("required");
       });
     }
