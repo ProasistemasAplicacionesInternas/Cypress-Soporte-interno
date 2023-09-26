@@ -4,7 +4,7 @@ import validacionCodigoPage from "../../pages/validacionCodigoPage";
 const test = require("../../fixtures/data-driven/login.json");
 
 const login = () => {
-    cy.visit("http://localhost/infraestructura/login.php");
+    cy.visit("http://localhost/HelisaSoporteInterno/login.php");
     loginPage.Alert();
     loginPage.typeUsername("usuario.administrador");
     loginPage.typePassword(test[0].password);
@@ -21,7 +21,7 @@ const login = () => {
         validacionCodigoPage.token("usuario.administrador");
         // cy.get('#servidores').click()
         // cy.get('.col-1 > a > img').click()
-        cy.visit('http://localhost/infraestructura/app/view/crea_servidor.php');
+        cy.visit('http://localhost/HelisaSoporteInterno/app/view/crea_servidor.php');
     });
           
   });

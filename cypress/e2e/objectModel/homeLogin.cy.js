@@ -5,14 +5,14 @@ import validacionCodigoPage from "../../pages/validacionCodigoPage";
 const test = require("../../fixtures/data-driven/login.json");
 
 const login = () => {
-  cy.visit("http://localhost/infraestructura/login.php");
+  cy.visit("http://localhost/HelisaSoporteInterno/login.php");
   loginPage.Alert();
   loginPage.typeUsername("codigo");
   loginPage.typePassword(test[0].password);
   loginPage.clickLogin();
 };
 const loginB = () => {
-  cy.visit("http://localhost/infraestructura/login.php");
+  cy.visit("http://localhost/HelisaSoporteInterno/login.php");
   loginPage.Alert();
   loginPage.typeUsername("token");
   loginPage.typePassword(test[0].password);
@@ -20,7 +20,7 @@ const loginB = () => {
 };
 
 const loginC = () => {
-  cy.visit("http://localhost/infraestructura/login_peticiones.php");
+  cy.visit("http://localhost/HelisaSoporteInterno/login_peticiones.php");
   loginPage.Alert();
   loginPage.typePeUsername("codigo");
   loginPage.typePePassword(test[0].password);
@@ -28,7 +28,7 @@ const loginC = () => {
 };
 
 const loginD = () => {
-  cy.visit("http://localhost/infraestructura/login_peticiones.php");
+  cy.visit("http://localhost/HelisaSoporteInterno/login_peticiones.php");
   loginPage.Alert();
   loginPage.typePeUsername("token");
   loginPage.typePePassword(test[0].password);

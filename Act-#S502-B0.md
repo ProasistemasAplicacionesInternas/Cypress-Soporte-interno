@@ -90,7 +90,7 @@ import './commands'
   "keywords": [
     "cypress"
   ],
-  "author": "jesus utria",
+  "author": "Helisa Software",
   "license": "ISC",
   "devDependencies": {
     "cypress": "^12.2.0",

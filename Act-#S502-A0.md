@@ -19,14 +19,14 @@ import validacionTokenPage from "../../pages/validacionTokenPage";
 import validacionCodigoPage from "../../pages/validacionCodigoPage";
 const test = require("../../fixtures/data-driven/login.json");
 const login = () => {
-  cy.visit("http://localhost/infraestructura/login.php");
+  cy.visit("http://localhost/HelisaSoporteInterno/login.php");
   loginPage.Alert();
   loginPage.typeUsername("codigo");
   loginPage.typePassword(test[0].password);
   loginPage.clickLogin();
 };
   const loginB = () => {
-    cy.visit("http://localhost/infraestructura/login.php");
+    cy.visit("http://localhost/HelisaSoporteInterno/login.php");
     loginPage.Alert();
     loginPage.typeUsername("token");
     loginPage.typePassword(test[0].password);

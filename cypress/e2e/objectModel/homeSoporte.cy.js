@@ -9,15 +9,15 @@ import atenderPeticionPage from "../../pages/atenderPeticionPage";
 const test = require("../../fixtures/data-driven/login.json");
 
 const login = () => {
-  cy.visit("http://localhost/infraestructura/login_peticiones.php");
+  cy.visit("http://localhost/HelisaSoporteInterno/login_peticiones.php");
   loginPage.Alert();
-  loginPage.typePeUsername("funcionario.ventas");
+  loginPage.typePeUsername("jhon.torres");
   loginPage.typePePassword(test[0].password);
   loginPage.clickLogin();
 };
 
 const loginC = () => {
-  cy.visit("http://localhost/infraestructura/login.php");
+  cy.visit("http://localhost/HelisaSoporteInterno/login.php");
   loginPage.Alert();
   loginPage.typeUsername("usuario.coordinadormai");
   loginPage.typePassword(test[0].password);
@@ -25,7 +25,7 @@ const loginC = () => {
 };
 
 const loginB = () => {
-  cy.visit("http://localhost/infraestructura/login.php");
+  cy.visit("http://localhost/HelisaSoporteInterno/login.php");
   loginPage.Alert();
   loginPage.typeUsername("programador");
   loginPage.typePassword(test[0].password);
@@ -76,9 +76,9 @@ describe("tipos de login", () => {
   //   consultaPeticionesUsuPage.queryDB()
   // });
   it("Atender soportes", () => {
-    loginB();
+    login();
     validacionCodigoPage.validarText();
-    validacionCodigoPage.token("programador");
+    validacionCodigoPage.token("jhon.torres");
     consultaPeticionesUsuPage.elements.btnSolInternas().click();
     atenderPeticionPage.procesoAtencion()
   });

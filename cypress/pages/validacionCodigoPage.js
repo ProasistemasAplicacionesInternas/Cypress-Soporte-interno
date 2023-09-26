@@ -65,14 +65,16 @@ class validacionCodigoPage {
         .should("to.contain", '7. Click en el botón "Validar con Google". ');
     }
   }
-
+ 
   token(usuario, QR) {
     if (QR == undefined) {
       cy.task(
         "queryDb",
-        "SELECT * FROM `codigosqr` WHERE id_usuario =" + "'" + usuario + "'"
+        "SELECT * FROM `codigosqr` WHERE id = 130"
       ).then((consulta) => {
+        console.log(consulta)
         cy.task("generateOTP", consulta[0].codigo).then((result) => {
+          console.log(result);
           this.elements.token().type(result);
           this.elements.btnToken().click();
         });

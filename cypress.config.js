@@ -24,6 +24,7 @@ function queryTestDb(query,config) {
 
 module.exports = defineConfig({
   chromeWebSecurity: false, 
+  video: true,
   e2e: {
     experimentalSessionAndOrigin: true,
     setupNodeEvents(on, config) {

@@ -1,7 +1,6 @@
 {
   "name": "cypress",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "cypress open ",
@@ -10,13 +9,14 @@
   "keywords": [
     "cypress"
   ],
-  "author": "jesus utria",
+  "author": "Helisa Software",
   "license": "ISC",
   "devDependencies": {
     "@zxing/browser": "^0.1.1",
     "@zxing/library": "^0.19.1",
-    "cypress": "^12.2.0",
+    "cypress": "^13.2.0",
     "cypress-otp": "^1.0.3",
     "mysql": "^2.18.1"
-  }
+  },
+  "description": "Proyecto Soporte Interno"
 }
