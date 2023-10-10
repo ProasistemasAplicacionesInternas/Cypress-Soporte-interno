@@ -6,7 +6,7 @@ const test = require("../../fixtures/data-driven/login.json");
 const login = () => {
   cy.visit("http://localhost/HelisaSoporteInterno/login.php");
   loginPage.Alert();
-  loginPage.typeUsername("jhon.torres");
+  loginPage.typeUsername("usuario.coordinadormai");
   loginPage.typePassword(test[0].password);
   loginPage.clickLogin();
 };
@@ -22,7 +22,7 @@ describe("Login", () => {
     /*
     login();
     validacionCodigoPage.validarText();
-    validacionCodigoPage.token("jhon.torres");
+    validacionCodigoPage.token("usuario.coordinadormai");
     cy.contains('Plataformas').click();*/
   })
   afterEach(() => {

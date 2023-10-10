@@ -8,12 +8,12 @@ function loginSoporteInterno() {
   cy.visit("http://localhost/HelisaSoporteInterno/login.php");
   loginPage.Alert();
   cy.wait(1000);
-  loginPage.typeUsername("jhon.torres");
+  loginPage.typeUsername("usuario.coordinadormai");
   loginPage.typePassword(test[0].password);
   cy.wait(1000);
   loginPage.clickLogin();
   validacionCodigoPage.validarText();
-  validacionCodigoPage.token("jhon.torres");
+  validacionCodigoPage.token("usuario.coordinadormai");
   cy.wait(1000);
 }
 

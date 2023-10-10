@@ -11,7 +11,7 @@ const test = require("../../fixtures/data-driven/login.json");
 const login = () => {
   cy.visit("http://localhost/HelisaSoporteInterno/login_peticiones.php");
   loginPage.Alert();
-  loginPage.typePeUsername("jhon.torres");
+  loginPage.typePeUsername("usuario.coordinadormai");
   loginPage.typePePassword(test[0].password);
   loginPage.clickLogin();
 };
@@ -78,7 +78,7 @@ describe("tipos de login", () => {
   it("Atender soportes", () => {
     login();
     validacionCodigoPage.validarText();
-    validacionCodigoPage.token("jhon.torres");
+    validacionCodigoPage.token("usuario.coordinadormai");
     consultaPeticionesUsuPage.elements.btnSolInternas().click();
     atenderPeticionPage.procesoAtencion()
   });
