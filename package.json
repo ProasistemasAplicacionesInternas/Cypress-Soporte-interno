@@ -14,7 +14,7 @@
   "devDependencies": {
     "@zxing/browser": "^0.1.1",
     "@zxing/library": "^0.19.1",
-    "cypress": "^13.4.0",
+    "cypress": "^13.6.2",
     "cypress-otp": "^1.0.3",
     "mysql": "^2.18.1"
   },
