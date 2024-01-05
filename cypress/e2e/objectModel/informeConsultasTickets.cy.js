@@ -39,7 +39,7 @@ describe("Soporte Interno", () => {
     cy.wait(2000);
     cy.get('#programadorFiltro').select(5);
     cy.wait(2000);
-    cy.get('[name="btn-consultarProgramador"]').invoke('removeAttr','target');
+    cy.get('[name="btn-consultarProgramador"]').parents().invoke('removeAttr','target');
     cy.get('[name="btn-consultarProgramador"]').click();
   });
 });
