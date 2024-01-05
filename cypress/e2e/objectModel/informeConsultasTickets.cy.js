@@ -41,5 +41,9 @@ describe("Soporte Interno", () => {
     cy.wait(2000);
     cy.get('[name="btn-consultarProgramador"]').parents().invoke('removeAttr','target');
     cy.get('[name="btn-consultarProgramador"]').click();
+    cy.wait(2000);
+  });
+    after(() => {
+    cy.log('Se finaliza la prueba');
   });
 });
