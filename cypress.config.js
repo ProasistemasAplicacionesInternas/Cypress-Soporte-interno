@@ -26,7 +26,7 @@ module.exports = defineConfig({
   chromeWebSecurity: false, 
   video: true,
   e2e: {
-    experimentalSessionAndOrigin: true,
+    // experimentalSessionAndOrigin: true,
     setupNodeEvents(on, config) {
       on("task", {
         generateOTP: require("cypress-otp"),
