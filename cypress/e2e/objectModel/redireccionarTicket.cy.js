@@ -49,9 +49,11 @@ describe("Soporte Interno", () => {
      cy.wait(2000);
      cy.get('#p_estado').select(1);
     cy.wait(2000);
+    cy.get('#p_cnclusiones').clear();
     cy.get('#p_cnclusiones').type("Como podemos evidenciar, El ticket si fue redireccionado");
      cy.wait(2000);
-
+     cy.get('#aceptar').click();
+     cy.wait(2000);
   });
     after(() => {
     cy.log('Se finaliza la prueba');
