@@ -2,10 +2,10 @@ class loginPage {
     elements = {
       alert: () => cy.get("p"),
       alertBtn: () => cy.get("#alerta"),
-      usernameInput: () => cy.get('input[placeholder="Usuario"]'),
-      passwordPeticionesInput: () => cy.get('input[placeholder="Contraseña"]'),
+      usernameInput: () => cy.get('input[placeholder="usuario"]'),
+      passwordPeticionesInput: () => cy.get('input[placeholder="contraseña"]'),
       usernamePeticionesInput: () => cy.get('input[placeholder="usuario"]'),
-      passwordInput: () => cy.get('input[placeholder="Contraseña"]'),
+      passwordInput: () => cy.get('input[placeholder="contraseña"]'),
       forgot: () => cy.get("a"),
       loginBtn: () => cy.get("#ingresar"),
     };

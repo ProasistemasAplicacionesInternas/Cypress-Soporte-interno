@@ -4,7 +4,7 @@ import validacionCodigoPage from "../../pages/validacionCodigoPage";
 const test = require("../../fixtures/data-driven/login.json");
 
 function loginSoporteInterno() {
-  cy.visit("http://localhost/HelisaSoporteInterno/login_peticiones.php");
+  cy.visit("http://localhost/infraestructura/login_peticiones.php");
   loginPage.Alert();
   cy.wait(2000);
   cy.get('#alerta').click(); 
@@ -41,6 +41,8 @@ describe("Soporte Interno", () => {
     cy.wait(2000);
     cy.get('#p_descripcion').type("Creamos el ticket y adjuntamos la imagen ");
     cy.wait(2000);
+    cy.get('input[type=file]').selectFile('imagen (4).png');
+    cy.wait(2000);
     cy.get('#btn-enviar_peticion').click();
     cy.wait(2000);
     cy.get('#validationTicket').click();
@@ -56,6 +58,8 @@ describe("Soporte Interno", () => {
     cy.get('#soporteMai').select(1);
     cy.wait(2000);
     cy.get('#p_descripcion').type("Creamos el ticket y adjuntamos la imagen ");
+    cy.wait(2000);
+    cy.get('input[type=file]').selectFile('imagen (8).png');
     cy.wait(2000);
     cy.get('#btn-enviar_peticion').click();
     cy.wait(2000);
