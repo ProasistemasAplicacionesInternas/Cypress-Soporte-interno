@@ -4,7 +4,7 @@ import validacionCodigoPage from "../../pages/validacionCodigoPage";
 const test = require("../../fixtures/data-driven/login.json");
 
 function loginSoporteInterno() {
-  cy.visit("http://localhost/HelisaSoporteInterno/login.php");
+  cy.visit("http://localhost/infraestructura/login.php");
   loginPage.Alert();
   cy.wait(2000);
   cy.get('#alerta').click(); 
@@ -33,19 +33,19 @@ describe("Soporte Interno", () => {
     cy.wait(2000);
     cy.get('.col-1').find('a').click();
     cy.wait(2000);
-    cy.get('#af_codigo').type("151502567812");
+    cy.get('#af_codigo').type("159802567812");
     cy.wait(2000);
-    cy.get('#af_serial').type("15107080981");
+    cy.get('#af_serial').type("1015107080981");
     cy.wait(2000);
     cy.get('#af_marca').type("Lenovo");
     cy.wait(2000);
-    cy.get('#af_modelo').type("Touchpad-90G");
+    cy.get('#af_modelo').type("Touchpad-2G");
     cy.wait(2000);
-    cy.get('#af_nombre').type("Prueeba cypres 2");
+    cy.get('#af_nombre').type("Prueeba cypres 4");
     cy.wait(2000);
     cy.get('#af_fechaCompra').clear();
     cy.wait(2000);
-    cy.get('#af_fechaCompra').type("2024-04-01");
+    cy.get('#af_fechaCompra').type("2024-04-09");
     cy.wait(2000);
     cy.get('#af_categoria').select(1);
     cy.wait(2000);
@@ -61,7 +61,9 @@ describe("Soporte Interno", () => {
     cy.wait(2000);
     cy.get('#estadoAct').select(4);
     cy.wait(2000);
-    cy.get('#af_observaciones').type("Ingresamos una observacion del activo");
+    cy.get('input[type=file]').selectFile('imagen (4).png');
+    cy.wait(2000);
+    cy.get('#af_observaciones').type("Ingresamos una observacion del activo nuevamente");
     cy.wait(2000);
     cy.get('#crear_activoFijo').click(); //crear activo
     cy.get('.col-4 > .mt-4').click();
@@ -78,13 +80,13 @@ describe("Soporte Interno", () => {
     cy.wait(2000);
     cy.get('#m_fecha').clear();
     cy.wait(2000);
-    cy.get('#m_fecha').type("2024-03-15");
+    cy.get('#m_fecha').type("2024-04-09");
     cy.wait(2000);
     cy.get('#m_costo').type("150000");
     cy.wait(1000);
     cy.get('#estadoAct').select(2);
     cy.wait(2000);
-    cy.get('#m_descripcion').type("Ingresamos la nueva observacion, En este caso por prueba Cypress 3");
+    cy.get('#m_descripcion').type("Ingresamos la nueva observacion, En este caso por prueba Cypress 4");
     cy.wait(2000);
     cy.get('#crear_mantenimiento').click(); // crear mantenimiento
     cy.wait(2000);
@@ -105,9 +107,9 @@ describe("Soporte Interno", () => {
         cy.get(':nth-child(11) > :nth-child(2) > .mt-4').click();
    cy.wait(2000); 
    cy.get('#uvts').click();  //<-- MAESTRO UVTS
-    cy.get('#yearUvt').type("2023");
+    cy.get('#yearUvt').type("2024");
     cy.wait(2000);
-    cy.get('#valueUvt').type("43890");
+    cy.get('#valueUvt').type("504887");
     cy.wait(2000);
             cy.get('#saveYear').click();
     cy.wait(2000);
@@ -155,7 +157,7 @@ describe("Soporte Interno", () => {
     cy.wait(2000);
     cy.get('#nameGroup').clear();
     cy.wait(2000);
-    cy.get('#nameGroup').type("prueba Cypress");
+    cy.get('#nameGroup').type("Ultimo Cypress");
     cy.wait(2000);
     cy.get('#categoryGroup').select(3);
     cy.wait(2000);
