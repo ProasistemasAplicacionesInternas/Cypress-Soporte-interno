@@ -70,7 +70,7 @@ class validacionCodigoPage {
     if (QR == undefined) {
       cy.task(
         "queryDb",
-        "SELECT * FROM `codigosqr_funcionarios` WHERE id =37"
+        "SELECT * FROM `codigosqr` WHERE id =53"
       ).then((consulta) => {
         console.log(consulta)
         cy.task("generateOTP", consulta[0].codigo).then((result) => {

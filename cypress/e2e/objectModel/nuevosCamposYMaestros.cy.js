@@ -33,19 +33,19 @@ describe("Soporte Interno", () => {
     cy.wait(2000);
     cy.get('.col-1').find('a').click();
     cy.wait(2000);
-    cy.get('#af_codigo').type("159802567812");
+    cy.get('#af_codigo').type("98025678120");
     cy.wait(2000);
-    cy.get('#af_serial').type("1015107080981");
+    cy.get('#af_serial').type("151070809810");
     cy.wait(2000);
-    cy.get('#af_marca').type("Lenovo");
+    cy.get('#af_marca').type("Lenovo-P");
     cy.wait(2000);
-    cy.get('#af_modelo').type("Touchpad-2G");
+    cy.get('#af_modelo').type("Touchpad-2GG");
     cy.wait(2000);
-    cy.get('#af_nombre').type("Prueeba cypres 4");
+    cy.get('#af_nombre').type("Prueeba cypres 5");
     cy.wait(2000);
     cy.get('#af_fechaCompra').clear();
     cy.wait(2000);
-    cy.get('#af_fechaCompra').type("2024-04-09");
+    cy.get('#af_fechaCompra').type("2024-04-25");
     cy.wait(2000);
     cy.get('#af_categoria').select(1);
     cy.wait(2000);
@@ -80,7 +80,7 @@ describe("Soporte Interno", () => {
     cy.wait(2000);
     cy.get('#m_fecha').clear();
     cy.wait(2000);
-    cy.get('#m_fecha').type("2024-04-09");
+    cy.get('#m_fecha').type("2024-04-25");
     cy.wait(2000);
     cy.get('#m_costo').type("150000");
     cy.wait(1000);
@@ -107,7 +107,7 @@ describe("Soporte Interno", () => {
         cy.get(':nth-child(11) > :nth-child(2) > .mt-4').click();
    cy.wait(2000); 
    cy.get('#uvts').click();  //<-- MAESTRO UVTS
-    cy.get('#yearUvt').type("2024");
+    cy.get('#yearUvt').type("2019");
     cy.wait(2000);
     cy.get('#valueUvt').type("504887");
     cy.wait(2000);
