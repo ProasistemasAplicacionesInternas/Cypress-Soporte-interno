@@ -33,19 +33,19 @@ describe("Soporte Interno", () => {
     cy.wait(2000);
     cy.get('.col-1').find('a').click();
     cy.wait(2000);
-    cy.get('#af_codigo').type("98025678120");
+    cy.get('#af_codigo').type("7425678128");
     cy.wait(2000);
-    cy.get('#af_serial').type("151070809810");
+    cy.get('#af_serial').type("70708098614");
     cy.wait(2000);
-    cy.get('#af_marca').type("Lenovo-P");
+    cy.get('#af_marca').type("Lenovo-P.l-08");
     cy.wait(2000);
-    cy.get('#af_modelo').type("Touchpad-2GG");
+    cy.get('#af_modelo').type("Touchpad-2GGsa");
     cy.wait(2000);
-    cy.get('#af_nombre').type("Prueeba cypres 5");
+    cy.get('#af_nombre').type("Prueeba cypres 8");
     cy.wait(2000);
     cy.get('#af_fechaCompra').clear();
     cy.wait(2000);
-    cy.get('#af_fechaCompra').type("2024-04-25");
+    cy.get('#af_fechaCompra').type("2024-05-06");
     cy.wait(2000);
     cy.get('#af_categoria').select(1);
     cy.wait(2000);
@@ -55,9 +55,9 @@ describe("Soporte Interno", () => {
     cy.wait(2000);
     cy.get('#af_ubicacion').select(1);
     cy.wait(2000);
-    cy.get('#costoCompra').type("5000000");
+    cy.get('#costoCompra').type("18920000");
     cy.wait(2000);
-    cy.get('#vidaUtil').type("6");
+    cy.get('#vidaUtil').type("8");
     cy.wait(2000);
     cy.get('#estadoAct').select(4);
     cy.wait(2000);
@@ -72,7 +72,7 @@ describe("Soporte Interno", () => {
     cy.wait(2000);
     cy.get('#criterio').select(2);
     cy.wait(2000);
-    cy.get('#nombreActivo').type("cpu");
+    cy.get('#nombreActivo').type("MiniComponente");
     cy.wait(2000);
     cy.get('#btn-consultarNombre').click();
     cy.wait(2000);
@@ -80,13 +80,13 @@ describe("Soporte Interno", () => {
     cy.wait(2000);
     cy.get('#m_fecha').clear();
     cy.wait(2000);
-    cy.get('#m_fecha').type("2024-04-25");
+    cy.get('#m_fecha').type("2024-05-06");
     cy.wait(2000);
     cy.get('#m_costo').type("150000");
     cy.wait(1000);
     cy.get('#estadoAct').select(2);
     cy.wait(2000);
-    cy.get('#m_descripcion').type("Ingresamos la nueva observacion, En este caso por prueba Cypress 4");
+    cy.get('#m_descripcion').type("Ingresamos la nueva observacion, En este caso por prueba Cypress 8");
     cy.wait(2000);
     cy.get('#crear_mantenimiento').click(); // crear mantenimiento
     cy.wait(2000);
@@ -94,7 +94,7 @@ describe("Soporte Interno", () => {
         cy.wait(2000);
         cy.get('#criterio').select(2);
         cy.wait(2000);
-        cy.get('#nombreActivo').type("cpu");
+        cy.get('#nombreActivo').type("MiniComponente");
         cy.wait(2000);
         cy.get('#btn-consultarNombre').click();
         cy.wait(2000);
@@ -107,7 +107,7 @@ describe("Soporte Interno", () => {
         cy.get(':nth-child(11) > :nth-child(2) > .mt-4').click();
    cy.wait(2000); 
    cy.get('#uvts').click();  //<-- MAESTRO UVTS
-    cy.get('#yearUvt').type("2019");
+    cy.get('#yearUvt').type("2018");
     cy.wait(2000);
     cy.get('#valueUvt').type("504887");
     cy.wait(2000);
@@ -123,7 +123,7 @@ describe("Soporte Interno", () => {
     cy.wait(2000);
     cy.get('#abrirModalImagen').click();
     cy.wait(2000);
-    cy.get('#created_name').type("Categoria Cypress"); //crear categoria 
+    cy.get('#created_name').type("AA cypress"); //crear categoria 
     cy.wait(2000);
     cy.get('#created_area').select(1);
     cy.wait(2000);
@@ -134,7 +134,7 @@ describe("Soporte Interno", () => {
     cy.wait(2000);
     cy.get('#new_name').clear(); //modificar categoria
     cy.wait(2000);
-    cy.get('#new_name').type("cypres");
+    cy.get('#new_name').type("AAA Final");
     cy.wait(2000);
     cy.get('#new_area').select(2);
     cy.wait(2000);
@@ -146,7 +146,7 @@ describe("Soporte Interno", () => {
     cy.wait(2000);
     cy.get('.seccionSecond > .container > .row > .col-4 > img').click(); //Crear grupo
     cy.wait(2000);
-    cy.get('#createdNameGroup').type("Cypress Prueba");
+    cy.get('#createdNameGroup').type("Almarios");
     cy.wait(2000);
     cy.get('#createdCategoryGroup').select(2);
     cy.wait(2000);
@@ -157,9 +157,9 @@ describe("Soporte Interno", () => {
     cy.wait(2000);
     cy.get('#nameGroup').clear();
     cy.wait(2000);
-    cy.get('#nameGroup').type("Ultimo Cypress");
+    cy.get('#nameGroup').type("armario");
     cy.wait(2000);
-    cy.get('#categoryGroup').select(3);
+    cy.get('#newCategoryGroup').select(3);
     cy.wait(2000);
     cy.get('#updateGroup > .modal-dialog > .modal-content > .modal-footer > .btn-primary').click(); //guardar modificar grupo
     cy.wait(3000);
