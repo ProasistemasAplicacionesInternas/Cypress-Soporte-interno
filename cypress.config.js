@@ -1,5 +1,5 @@
 const { defineConfig } = require('cypress');
-const mysql =require("mysql")
+const mysql =require("mysql2")
 
 function queryTestDb(query,config) {
   const env ={

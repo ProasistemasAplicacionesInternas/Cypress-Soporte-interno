@@ -65,25 +65,27 @@ class validacionCodigoPage {
         .should("to.contain", '7. Click en el botón "Validar con Google". ');
     }
   }
- 
   token(usuario, QR) {
     if (QR == undefined) {
       cy.task(
         "queryDb",
-        "SELECT * FROM `codigosqr` WHERE id =53"
+        "SELECT * FROM `codigosqr` WHERE id_usuario =" +
+          "'" +
+          usuario +
+          "'"
       ).then((consulta) => {
-        console.log(consulta)
         cy.task("generateOTP", consulta[0].codigo).then((result) => {
-          console.log(result);
           this.elements.token().type(result);
           this.elements.btnToken().click();
         });
       });
     } else {
       this.elements
-        .QR().readCode()
+        .QR().wait(10).readCode()
         .then((link) => {
-          var secret = link.text.substring(59);
+          cy.log(link)
+          var secret = link.text.substring(49);
+          cy.log(secret)
           cy.task("generateOTP", secret).then((result) => {
             this.elements.token().type(result);
             this.elements.btnToken().click();

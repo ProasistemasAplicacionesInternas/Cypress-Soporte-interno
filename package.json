@@ -12,7 +12,7 @@
   "author": "Helisa Software",
   "license": "ISC",
   "devDependencies": {
-    "@zxing/browser": "^0.1.1",
+    "@zxing/browser": "^0.1.4",
     "@zxing/library": "^0.19.1",
     "cypress": "^13.6.2",
     "cypress-otp": "^1.0.3",
@@ -26,5 +26,8 @@
   "bugs": {
     "url": "https://github.com/ProasistemasAplicacionesInternas/Cypress-Soporte-interno/issues"
   },
-  "homepage": "https://github.com/ProasistemasAplicacionesInternas/Cypress-Soporte-interno#readme"
+  "homepage": "https://github.com/ProasistemasAplicacionesInternas/Cypress-Soporte-interno#readme",
+  "dependencies": {
+    "mysql2": "^3.9.7"
+  }
 }
