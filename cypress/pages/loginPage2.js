@@ -7,7 +7,7 @@ class loginPage {
   };
   
 
-  login(username, password = "Helis@2024*") {
+  login(username, password = "Prueba2023**") {
     cy.wait(2000);
     this.elements.btnalert().should("be.visible").click();
     this.elements.usuario().type(username);

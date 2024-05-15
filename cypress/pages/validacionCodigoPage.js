@@ -21,7 +21,7 @@ class validacionCodigoPage {
     if (QR == undefined) {
       this.elements
         .tittle()
-        .should("to.contain", "Autenticación de Codigo de Google");
+        .should("to.contain", "Autenticación de Código de Google");
       this.elements.paso1().should("to.contain", "1. Ingrese a la App.");
       this.elements
         .paso2()
@@ -65,27 +65,25 @@ class validacionCodigoPage {
         .should("to.contain", '7. Click en el botón "Validar con Google". ');
     }
   }
+ 
   token(usuario, QR) {
     if (QR == undefined) {
       cy.task(
         "queryDb",
-        "SELECT * FROM `codigosqr` WHERE id_usuario =" +
-          "'" +
-          usuario +
-          "'"
+        "SELECT * FROM `codigosqr` WHERE id =53"
       ).then((consulta) => {
+        console.log(consulta)
         cy.task("generateOTP", consulta[0].codigo).then((result) => {
+          console.log(result);
           this.elements.token().type(result);
           this.elements.btnToken().click();
         });
       });
     } else {
       this.elements
-        .QR().wait(10).readCode()
+        .QR().readCode()
         .then((link) => {
-          cy.log(link)
-          var secret = link.text.substring(49);
-          cy.log(secret)
+          var secret = link.text.substring(59);
           cy.task("generateOTP", secret).then((result) => {
             this.elements.token().type(result);
             this.elements.btnToken().click();
