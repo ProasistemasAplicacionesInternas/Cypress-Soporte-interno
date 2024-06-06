@@ -4,7 +4,7 @@ import validacionCodigoPage from "../../pages/validacionCodigoPage";
 
 const login = () => {
   cy.viewport(1280, 720)
-  cy.visit("http://localhost/infraestructura2/login.php");
+  cy.visit("http://localhost/infraestructura/login.php");
   cy.wait(1000);
   LoginPage.login("administrador");
   cy.wait(1000);
@@ -28,7 +28,7 @@ describe("Verificar Login", () => {
       cy.wait(2000);
       cy.get('#f_estado').select('Inactivo');
       cy.wait(2000);
-      cy.get('#f_fecha_inactivacion').type("2024-05-15");
+      cy.get('#f_fecha_inactivacion').type("2024-06-06");
       cy.wait(2000);
       cy.get('#descripcionRetiro').type("Va a salir un alert impidiendo la acción hasta que el funcionario acepte lo que tiene pendiente");
       cy.wait(2000);
