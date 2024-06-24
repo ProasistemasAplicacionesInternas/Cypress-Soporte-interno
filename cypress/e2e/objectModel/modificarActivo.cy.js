@@ -4,7 +4,7 @@ import validacionCodigoPage from "../../pages/validacionCodigoPage";
 
 const login = () => {
   cy.viewport(1280, 720)
-  cy.visit("http://localhost/infraestructura/login.php");
+  cy.visit("http://localhost/infraestructura1/login.php");
   cy.wait(1000);
   LoginPage.login("administrador");
   cy.wait(1000);
@@ -25,13 +25,13 @@ describe("Verificar Login", () => {
       cy.wait(2000);
       cy.get('#criterio').select(1);
       cy.wait(2000);
-      cy.get('#codigoActivo').type("98025678128");
+      cy.get('#codigoActivo').type("7026892045");
       cy.wait(2000);
       cy.get('#btn-consultarCodigo').click();
       cy.wait(2000);
       cy.get(':nth-child(8) > form > .btn').click();
       cy.wait(2000);
-      cy.get('#af_categoria').select("CPU");
+      // cy.get('#af_categoria').select("CPU");
       cy.wait(2000);
       cy.get('#af_observaciones').clear();
       cy.get('#af_observaciones').type("Como podemos ver trae todos los campos y se pueden modificar");
