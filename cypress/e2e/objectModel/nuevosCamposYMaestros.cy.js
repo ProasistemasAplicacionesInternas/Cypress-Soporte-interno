@@ -4,7 +4,7 @@ import validacionCodigoPage from "../../pages/validacionCodigoPage";
 
 const login = () => {
   cy.viewport(1280, 720)
-  cy.visit("http://localhost/infraestructura/login.php");
+  cy.visit("http://localhost/infraestructura1/login.php");
   cy.wait(1000);
   LoginPage.login("administrador");
   cy.wait(1000);
@@ -26,19 +26,19 @@ describe("Verificar Login", () => {
       cy.wait(2000);
       cy.get('.col-1').find('a').click();
       cy.wait(2000);
-      cy.get('#af_codigo').type("4826892045");
+      cy.get('#af_codigo').type("48268920456789");
       cy.wait(2000);
-      cy.get('#af_serial').type("83186998760");
+      cy.get('#af_serial').type("831869987600878");
       cy.wait(2000);
-      cy.get('#af_marca').type("LG_Luks");
+      cy.get('#af_marca').type("LG_Lucks");
       cy.wait(2000);
-      cy.get('#af_modelo').type("TP-1026");
+      cy.get('#af_modelo').type("TP-102607");
       cy.wait(2000);
-      cy.get('#af_nombre').type("Ultimo video Cypress FunC");
+      cy.get('#af_nombre').type("Ultimo video Cypress 6 Bugs");
       cy.wait(2000);
       cy.get('#af_fechaCompra').clear();
       cy.wait(2000);
-      cy.get('#af_fechaCompra').type("2024-06-06");
+      cy.get('#af_fechaCompra').type("2024-06-24");
       cy.wait(2000);
       cy.get('#af_categoria').select("CPU");
       cy.wait(2000);
@@ -93,7 +93,7 @@ describe("Verificar Login", () => {
       cy.wait(2000);
       cy.get('#m_fecha').clear();
       cy.wait(2000);
-      cy.get('#m_fecha').type("2024-06-06");
+      cy.get('#m_fecha').type("2024-06-24");
       cy.wait(2000);
       cy.get('#m_costo').type("187000");
       cy.wait(1000);
@@ -120,7 +120,7 @@ describe("Verificar Login", () => {
           cy.get(':nth-child(11) > :nth-child(2) > .mt-4').click();
      cy.wait(2000); 
      cy.get('#uvts').click();  //<-- MAESTRO UVTS
-      cy.get('#yearUvt').type("2016");
+      cy.get('#yearUvt').type("2015");
       cy.wait(2000);
       cy.get('#valueUvt').type("104982");
       cy.wait(2000);
