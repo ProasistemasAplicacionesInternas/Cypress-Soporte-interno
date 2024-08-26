@@ -1,8 +1,8 @@
 class loginPage {
   elements = {
     btnalert: () => cy.get('[value="Continuar"]'),
-    usuario: () => cy.get("#f_user"),
-    contraseña: () => cy.get("#f_password"),
+    usuario: () => cy.get("#usuario"),
+    contraseña: () => cy.get("#clave"),
     ingresar: () => cy.get("#ingresar"),
   };
   

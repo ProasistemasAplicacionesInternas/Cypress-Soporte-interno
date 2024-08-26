@@ -24,6 +24,8 @@
 // -- This will overwrite an existing command --
  import { BrowserMultiFormatReader } from '@zxing/browser';
 
+ import 'cypress-file-upload';
+
 const reader = new BrowserMultiFormatReader();
 
 Cypress.Commands.add('readCode', { prevSubject: true }, (subject) => {
