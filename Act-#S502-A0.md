@@ -6,7 +6,7 @@
 -  ## cypress.config.js
 #### modificacion: 
 ~~~ javascript
-"database":"hinfraestructura"              //linea 10 
+"database":"hinterno"              //linea 10 
 // experimentalSessionAndOrigin: true,        //linea 28
 generateOTP: require("cypress-otp"),       //linea 31
 ~~~

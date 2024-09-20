@@ -7,7 +7,7 @@ function queryTestDb(query,config) {
         "host": "localhost",
         "user": "root",
         "password": "",
-        "database":"hinfraestructura"
+        "database":"hinterno"
       }}
   const connection = mysql.createConnection(env.db)
   connection.connect()

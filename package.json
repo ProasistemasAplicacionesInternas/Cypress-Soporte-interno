@@ -13,10 +13,12 @@
   "license": "ISC",
   "devDependencies": {
     "@zxing/browser": "^0.1.4",
-    "@zxing/library": "^0.19.1",
+    "@zxing/library": "^0.20.0",
     "cypress": "^13.6.2",
+    "cypress-file-upload": "^5.0.8",
     "cypress-otp": "^1.0.3",
-    "mysql": "^2.18.1"
+    "mysql": "^2.18.1",
+    "mysql2": "^3.11.3"
   },
   "description": "Proyecto Soporte Interno",
   "repository": {
@@ -26,8 +28,5 @@
   "bugs": {
     "url": "https://github.com/ProasistemasAplicacionesInternas/Cypress-Soporte-interno/issues"
   },
-  "homepage": "https://github.com/ProasistemasAplicacionesInternas/Cypress-Soporte-interno#readme",
-  "dependencies": {
-    "mysql2": "^3.9.7"
-  }
+  "homepage": "https://github.com/ProasistemasAplicacionesInternas/Cypress-Soporte-interno#readme"
 }
