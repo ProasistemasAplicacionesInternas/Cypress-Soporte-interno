@@ -35,7 +35,7 @@ class validacionTokenPage {
         "SELECT * FROM `validacion_token` ORDER BY `validacion_token`.`fecha_token` DESC"
       ).then((result) => {
         cy.wait(4000);
-        cy.get("#token").type(result[0].token);
+        cy.get("#tokenF").type(result[0].token);
         this.elements.btnToken().click();
       });
     } else {
@@ -44,7 +44,7 @@ class validacionTokenPage {
         "SELECT * FROM `validacion_token` ORDER BY `validacion_token`.`fecha_token` DESC"
       ).then((result) => {
         cy.wait(4000);
-        cy.get("#tokenF").type(result[0].token);
+        cy.get("#token").type(result[0].token);
         this.elements.btnToken().click();
       });
     }
