@@ -17,22 +17,22 @@ describe("Verificar Login", () => {
     cy.wait(1000);
     cy.get('[value="Continuar"]').click();
     cy.get("#usuario").type('luis.mendez');
-    cy.get("#clave").type('Lm123456789**');
+    cy.get("#clave").type('Helisa12*');
     cy.get("#ingresar").click();
     cy.wait(2500);
     validacionCodigoPage.token("luis.mendez");
   });
   it('prueba RQ_2686', () => {
-/*     cy.wait(3000);
-    cy.get(':nth-child(2) > #dropdownMenuButton').click();
+    cy.wait(3000);
+    cy.get(':nth-child(1) > #dropdownMenuButton').click();
     cy.wait(3000);
     cy.get('#solicitudesSeguridad').click();
     cy.wait(3000);
-    cy.get(':nth-child(2) > :nth-child(8) > form > #seleccionar').click();
+    cy.get(':nth-child(1) > :nth-child(8) > form > #seleccionarPeticionSeguridad').click();
     cy.wait(3000);
-    cy.get('#p_estado').select(2);
+    cy.get('#pEstado').select(2);
     cy.wait(3000);
-    cy.get('#p_conclusiones').type('pruebaCypress');
+    cy.get('#pConclusiones').type('pruebaCypress');
     cy.wait(3000);
     cy.get('.ml-3 > .btn').click();
     cy.wait(3000);
@@ -40,38 +40,35 @@ describe("Verificar Login", () => {
     cy.wait(3000);
     cy.get('#aceptar').click();
     cy.wait(3000);
-    cy.get(':nth-child(2) > #dropdownMenuButton').click();
+    cy.get(':nth-child(1) > #dropdownMenuButton').click();
     cy.wait(3000);
     cy.get('#solicitudesSeguridad').click();
     cy.wait(3000);
-    cy.get(':nth-child(2) > :nth-child(8) > form > #seleccionar').click();
+    cy.get(':nth-child(2) > :nth-child(8) > form > #seleccionarPeticionSeguridad').click();
     cy.wait(3000);
-    cy.get('#p_estado').select(3);
+    cy.get('#pEstado').select(3);
     cy.wait(3000);
-    cy.get('#p_conclusiones').type('estadoEnProcesoC');
+    cy.get('#pConclusiones').type('estadoEnProcesoC');
     cy.wait(3000);
     cy.get('#aceptar').click();
     cy.wait(3000);
-    cy.get(':nth-child(2) > #dropdownMenuButton').click();
+    cy.get(':nth-child(1) > #dropdownMenuButton').click();
     cy.wait(3000);
     cy.get('#solicitudesSeguridad').click();
     cy.wait(3000);
-    cy.get(':nth-child(2) > :nth-child(8) > form > #seleccionar').click();
+    cy.get('#seleccionarPeticionSeguridad').click();
     cy.wait(3000);
-    cy.get('#p_estado').select(1);
+    cy.get('#pEstado').select(1);
     cy.wait(3000);
-    cy.get('#p_conclusiones').type('pruebaResuelto');
+    cy.get('#pConclusiones').type('pruebaResuelto');
     cy.wait(3000);
     cy.get('#aceptar').click();
     cy.wait(3000);
-    cy.get(':nth-child(2) > #dropdownMenuButton').click();
+    cy.get(':nth-child(1) > #dropdownMenuButton').click();
     cy.wait(3000);
     cy.get('#solicitudesSeguridad').click();
-    cy.wait(3000); */
-
-
-
-    cy.get(':nth-child(4) > #dropdownMenuButton').click();
+    cy.wait(3000);
+    /* cy.get(':nth-child(3) > #dropdownMenuButton').click();
     cy.wait(3000);
     cy.get('#ConsultarSeguridad').click();
     cy.wait(3000);
@@ -91,7 +88,7 @@ describe("Verificar Login", () => {
     cy.wait(3000);
     cy.get('a > img').click();
     cy.wait(3000);
-    cy.get(':nth-child(4) > #dropdownMenuButton').click();
+    cy.get(':nth-child(3) > #dropdownMenuButton').click();
     cy.wait(3000);
     cy.get('#ConsultarSeguridad').click();
     cy.wait(3000);
@@ -110,7 +107,7 @@ describe("Verificar Login", () => {
     cy.get('#documentModal > .modal-dialog > .modal-content > .modal-header > .close > span').click();
     cy.get('a > img').click();
     cy.wait(3000);
-    cy.get(':nth-child(4) > #dropdownMenuButton').click();
+    cy.get(':nth-child(3) > #dropdownMenuButton').click();
     cy.wait(3000);
     cy.get('#ConsultarSeguridad').click();
     cy.wait(3000);
@@ -129,7 +126,7 @@ describe("Verificar Login", () => {
     cy.get('#documentModal > .modal-dialog > .modal-content > .modal-header > .close > span').click();
     cy.get('a > img').click();
     cy.wait(3000);
-    cy.get(':nth-child(4) > #dropdownMenuButton').click();
+    cy.get(':nth-child(3) > #dropdownMenuButton').click();
     cy.wait(3000);
     cy.get('#ConsultarSeguridad').click();
     cy.wait(3000);
@@ -148,16 +145,16 @@ describe("Verificar Login", () => {
     cy.get('#documentModal > .modal-dialog > .modal-content > .modal-header > .close > span').click();
     cy.get('a > img').click();
     cy.wait(3000);
-    cy.get(':nth-child(4) > #dropdownMenuButton').click();
+    cy.get(':nth-child(3) > #dropdownMenuButton').click();
     cy.wait(3000);
     cy.get('#ConsultarSeguridad').click();
     cy.wait(3000);
     cy.get('#criterioSg').select(3);
     cy.wait(3000);
-    cy.get('#peticionFiltro').type('13');
+    cy.get('#peticionFiltro').type('5');
     cy.wait(3000);
     cy.get('#btn-consultarTicketI').click();
-
+ */
   });
 
 });
