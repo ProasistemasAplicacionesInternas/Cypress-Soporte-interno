@@ -1,5 +1,5 @@
-const { defineConfig } = require('cypress');
-const mysql =require("mysql2")
+const { defineConfig } = require("cypress");
+const mysql = require('mysql');
 
 function queryTestDb(query,config) {
   const env ={
@@ -7,7 +7,7 @@ function queryTestDb(query,config) {
         "host": "localhost",
         "user": "root",
         "password": "",
-        "database":"hinterno"
+        "database":"hinfraestructura"
       }}
   const connection = mysql.createConnection(env.db)
   connection.connect()
