@@ -25,6 +25,8 @@
  import { BrowserMultiFormatReader } from '@zxing/browser';
 
  import 'cypress-file-upload';
+ import '@zxing/browser';
+
 
 const reader = new BrowserMultiFormatReader();
 
